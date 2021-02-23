@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>View images</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="card mx-auto my-5" style="width:90%;">
+        <div class="card-header" align="center">
+            <h3> <b> <u> View Images </h3> </u></b><br>
+        </div>
+        <div class="card-body">
+        <div class="row">
+            <!-- {{.}} -->
+            {{range $index, $res:=.}}
+            <div class="card col-md-4 my-2">
+                <!-- width: 18rem; -->
+                <img class="card-img-top h-100 py-2" src="http://localhost:8080/{{$res.Path}}" alt="Card image cap">
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+
+</html>

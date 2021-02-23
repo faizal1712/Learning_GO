@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>View Data</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+
+    <div class="m-5">
+        <table id="myTable" class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Train No.</th>
+                    <th>Train Name</th>
+                    <th>Starting Station</th>
+                    <th>Ending Station</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+    window.dataSet=[];
+    $(document).ready( function () {
+
+    $.ajax({
+            url: "http://localhost:8080/fetch_data",
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json"
+        })
+        .done(function(response) {
+            try {
+                // console.log(response)
+                window.dataSet = [];
+                for (var i = 0; i < response.length; i++) {
+                    var temp = [];
+                    var j = i + 1;
+                    temp.push(j);
+                    temp.push(response[i]['TrainNo']);
+                    temp.push(response[i]['TrainName']);
+                    temp.push(response[i]['StartingPoint']);
+                    temp.push(response[i]['EndingPoint']);
+                    dataSet.push(temp);
+                }
+                // console.log(dataSet)
+                // $("#myTable").dataTable().fnDestroy();
+                $('#myTable').DataTable({
+                    data: dataSet,
+                });
+            } catch (err) {
+                alert("An error occured, Please try again!");
+            }
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            var msg = JSON.parse(jqXHR.responseText);
+            console.log(msg)
+        });
+    });
+</script>

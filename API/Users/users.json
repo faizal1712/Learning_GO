@@ -1,0 +1,193 @@
+{
+"code": 200,
+"meta": {
+"pagination": {
+"total": 1371,
+"pages": 69,
+"page": 1,
+"limit": 20
+}
+},
+"data": [
+{
+"id": 305,
+"name": "Rameshwar Namboothiri",
+"email": "rameshwar_namboothiri@bartell.net",
+"gender": "Male",
+"status": "Active",
+"created_at": "2021-02-03T03:50:09.481+05:30",
+"updated_at": "2021-02-03T03:50:09.481+05:30"
+},
+{
+"id": 306,
+"name": "Somnath Joshi",
+"email": "somnath_joshi@fahey-parker.biz",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.487+05:30",
+"updated_at": "2021-02-03T03:50:09.487+05:30"
+},
+{
+"id": 307,
+"name": "Parvati Mahajan CPA",
+"email": "mahajan_cpa_parvati@kshlerin.org",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.495+05:30",
+"updated_at": "2021-02-03T03:50:09.495+05:30"
+},
+{
+"id": 308,
+"name": "Deepankar Kapoor",
+"email": "kapoor_deepankar@oreilly.io",
+"gender": "Male",
+"status": "Active",
+"created_at": "2021-02-03T03:50:09.518+05:30",
+"updated_at": "2021-02-03T03:50:09.518+05:30"
+},
+{
+"id": 309,
+"name": "Deeptendu Nayar",
+"email": "nayar_deeptendu@hahn.com",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.528+05:30",
+"updated_at": "2021-02-03T03:50:09.528+05:30"
+},
+{
+"id": 310,
+"name": "Subodh Khanna II",
+"email": "ii_khanna_subodh@medhurst-kemmer.name",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.533+05:30",
+"updated_at": "2021-02-03T03:50:09.533+05:30"
+},
+{
+"id": 311,
+"name": "Aaratrika Acharya",
+"email": "acharya_aaratrika@batz.io",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.55+05:30",
+"updated_at": "2021-02-03T03:50:09.55+05:30"
+},
+{
+"id": 312,
+"name": "Pres. Radha Nambeesan",
+"email": "pres_nambeesan_radha@trantow.net",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.557+05:30",
+"updated_at": "2021-02-03T03:50:09.557+05:30"
+},
+{
+"id": 313,
+"name": "Anilabh Pandey",
+"email": "pandey_anilabh@braun.name",
+"gender": "Female",
+"status": "Active",
+"created_at": "2021-02-03T03:50:09.587+05:30",
+"updated_at": "2021-02-03T03:50:09.587+05:30"
+},
+{
+"id": 314,
+"name": "Himani Naik",
+"email": "naik_himani@veum.name",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.601+05:30",
+"updated_at": "2021-02-03T03:50:09.601+05:30"
+},
+{
+"id": 315,
+"name": "Shantanu Adiga",
+"email": "shantanu_adiga@corwin-champlin.info",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.621+05:30",
+"updated_at": "2021-02-03T03:50:09.621+05:30"
+},
+{
+"id": 316,
+"name": "Bhishma Dutta",
+"email": "bhishma_dutta@mitchell-frami.info",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.634+05:30",
+"updated_at": "2021-02-03T03:50:09.634+05:30"
+},
+{
+"id": 317,
+"name": "Ankal Sharma VM",
+"email": "sharma_vm_ankal@mccullough.io",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.643+05:30",
+"updated_at": "2021-02-03T03:50:09.643+05:30"
+},
+{
+"id": 318,
+"name": "Vidya Malik",
+"email": "vidya_malik@jones-volkman.name",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.673+05:30",
+"updated_at": "2021-02-03T03:50:09.673+05:30"
+},
+{
+"id": 319,
+"name": "Naveen Bharadwaj",
+"email": "naveen_bharadwaj@roberts.biz",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.697+05:30",
+"updated_at": "2021-02-03T03:50:09.697+05:30"
+},
+{
+"id": 320,
+"name": "Charumati Chopra Sr.",
+"email": "chopra_sr_charumati@conn-runte.biz",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.706+05:30",
+"updated_at": "2021-02-03T03:50:09.706+05:30"
+},
+{
+"id": 321,
+"name": "Akshita Jain",
+"email": "akshita_jain@padberg.co",
+"gender": "Female",
+"status": "Active",
+"created_at": "2021-02-03T03:50:09.721+05:30",
+"updated_at": "2021-02-03T03:50:09.721+05:30"
+},
+{
+"id": 322,
+"name": "Budhil Gill",
+"email": "budhil_gill@schuster-conroy.biz",
+"gender": "Female",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.742+05:30",
+"updated_at": "2021-02-03T03:50:09.742+05:30"
+},
+{
+"id": 323,
+"name": "Trilokesh Panicker",
+"email": "panicker_trilokesh@greenfelder-bergnaum.com",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.751+05:30",
+"updated_at": "2021-02-03T03:50:09.751+05:30"
+},
+{
+"id": 324,
+"name": "Mrs. Kalyani Devar",
+"email": "devar_mrs_kalyani@steuber-dooley.info",
+"gender": "Male",
+"status": "Inactive",
+"created_at": "2021-02-03T03:50:09.769+05:30",
+"updated_at": "2021-02-03T03:50:09.769+05:30"
+}
+]
+}

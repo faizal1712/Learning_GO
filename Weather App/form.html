@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form Data</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="w-75 mt-5 mx-auto" id="page">
+        <div class="card bg-light border-dark">
+            {{if .Success}}
+                <h1></br>Temperature in celcius : {{.CelTemp}}</h1>
+                <h1></br>Temperature in farenheit : {{.FarTemp}}</h1>
+                <h1></br>Latitude : {{.Lat}}</h1>
+                <h1></br>Longitude : {{.Lon}}</h1>
+            {{else}}
+                <h5 class="card-header text-white bg-dark border-dark text-center">Fetch Data</h5>
+                <div class="card-body mt-3">
+                    <form class="was-validated" id="login_form" method="POST">
+
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label class="col-form-label" for="city_name">Name</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control border-dark" name="city_name" placeholder="Location Name" required />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="mx-auto">
+                                <button class="btn btn-dark" type="submit">Fetch</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+
+</html>

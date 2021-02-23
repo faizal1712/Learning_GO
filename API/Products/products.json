@@ -1,0 +1,481 @@
+{
+"code": 200,
+"meta": {
+"pagination": {
+"total": 185,
+"pages": 10,
+"page": 1,
+"limit": 20
+}
+},
+"data": [
+{
+"id": 1,
+"name": "Fantastic Paper Table",
+"description": "Apostolus quisquam confugo creber et tutamen cohors nisi tantum textor eligendi aetas aegre cubitum defessus viduo canonicus arcus abbas vito turpe ut pecunia terror solio et vigor amiculum amor stultus ea deficio antiquus celer vivo turbo suscipio vel virgo vestigium ater carus perspiciatis ab tempus trado beatus vultuosus placeat speculum numquam tergeo id ager cinis auctus quaerat colligo tabesco tabella delicate alioqui somnus corona bonus patria censura repellendus enim.",
+"image": "https://loremflickr.com/250/250",
+"price": "16572.61",
+"discount_amount": "9747.56",
+"status": true,
+"categories": [
+{
+"id": 6,
+"name": "Movies, Outdoors \u0026 Sports"
+},
+{
+"id": 2,
+"name": "Outdoors"
+},
+{
+"id": 11,
+"name": "Kids, Grocery \u0026 Tools"
+},
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home"
+},
+{
+"id": 8,
+"name": "Beauty, Outdoors \u0026 Jewelry"
+}
+]
+},
+{
+"id": 2,
+"name": "Enormous Silk Wallet",
+"description": "Vel sit desino pecco carbo vomer villa id caste tui venio credo utrimque trepide timidus alter ratione et vergo curis tersus sursum aqua delego doloremque degero cohibeo aliquam toties defessus bardus carus dolorum armo solio quod nostrum amplus suadeo audacia corrigo supellex odio tardus videlicet.",
+"image": "https://loremflickr.com/250/250",
+"price": "8040.02",
+"discount_amount": "1353.3",
+"status": true,
+"categories": [
+{
+"id": 20,
+"name": "Beauty"
+},
+{
+"id": 19,
+"name": "Electronics \u0026 Sports"
+},
+{
+"id": 16,
+"name": "Music \u0026 Industrial"
+},
+{
+"id": 11,
+"name": "Kids, Grocery \u0026 Tools"
+}
+]
+},
+{
+"id": 3,
+"name": "Incredible Cotton Car",
+"description": "Bestia antepono peccatus adsidue sapiente adsum decet alias victoria thymum amitto artificiose auctus tollo est atrox error ars aegrotatio condico angustus arma assumenda cultura vespillo assentator vacuus quos supplanto vulgivagus utor comedo cimentarius audax auris bellum desidero demergo demulceo triumphus versus viduo timor denuncio arca ustilo acceptus spiculum sublime adimpleo allatus tamen recusandae volup caute.",
+"image": "https://loremflickr.com/250/250",
+"price": "36707.2",
+"discount_amount": "21088.39",
+"status": true,
+"categories": [
+{
+"id": 6,
+"name": "Movies, Outdoors \u0026 Sports"
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home"
+},
+{
+"id": 7,
+"name": "Sports"
+}
+]
+},
+{
+"id": 4,
+"name": "Aerodynamic Granite Shirt",
+"description": "Nihil arbustum cognomen et compono tracto capillus omnis qui corroboro carmen aut timor auctus velociter tenetur strenuus in vinitor vulticulus autem coaegresco sono quisquam defero admoneo utor crustulum cupio derelinquo voluptatem tondeo corona et aspernatur ullam claudeo.",
+"image": "https://loremflickr.com/250/250",
+"price": "23275.1",
+"discount_amount": "1949.29",
+"status": true,
+"categories": [
+{
+"id": 15,
+"name": "Kids \u0026 Movies"
+}
+]
+},
+{
+"id": 5,
+"name": "Practical Paper Pants",
+"description": "Animadverto convoco atque cavus claustrum tero agnosco celo est ab eligendi subseco clementia derelinquo annus theologus similique xiphias verto confero quos sufficio claudeo solum certo repudiandae.",
+"image": "https://loremflickr.com/250/250",
+"price": "15316.42",
+"discount_amount": "961.91",
+"status": true,
+"categories": [
+{
+"id": 16,
+"name": "Music \u0026 Industrial"
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 11,
+"name": "Kids, Grocery \u0026 Tools"
+},
+{
+"id": 8,
+"name": "Beauty, Outdoors \u0026 Jewelry"
+}
+]
+},
+{
+"id": 6,
+"name": "Practical Iron Hat",
+"description": "Comminor adulescens sodalitas concedo curvus defungo cunabula cum cimentarius adduco commodi ut torrens decerno tendo colo conturbo villa vulnus ad correptius eos volup demitto patria summopere sophismata neque tabernus subseco colloco aeger voluptas ademptio vehemens eius vulgaris capitulus adimpleo despirmatio cerno ullus balbus avarus vulticulus votum caelum a aut.",
+"image": "https://loremflickr.com/250/250",
+"price": "36804.76",
+"discount_amount": "27409.12",
+"status": true,
+"categories": [
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home"
+},
+{
+"id": 4,
+"name": "Health"
+},
+{
+"id": 7,
+"name": "Sports"
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 14,
+"name": "Garden, Tools \u0026 Industrial"
+}
+]
+},
+{
+"id": 7,
+"name": "Lightweight Copper Clock",
+"description": "Aut a culpa delibero excepturi defigo acsi harum omnis dedico catena nihil debitis commodi usitas viduo curvo quo ambitus tumultus succurro thema alter enim voro ascisco thalassinus aliquid cervus solum cupiditas tactus et suffragium adeo.",
+"image": "https://loremflickr.com/250/250",
+"price": "45625.11",
+"discount_amount": "6873.4",
+"status": true,
+"categories": [
+{
+"id": 16,
+"name": "Music \u0026 Industrial"
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 13,
+"name": "Jewelry"
+},
+{
+"id": 18,
+"name": "Grocery, Books \u0026 Jewelry"
+},
+{
+"id": 1,
+"name": "Movies \u0026 Tools"
+}
+]
+},
+{
+"id": 8,
+"name": "Rustic Marble Hat",
+"description": "Cupressus acerbitas cupiditate ademptio aut suus coadunatio crustulum comes adulatio tametsi defungo vitae demum sed comprehendo aveho sit pecus asper suffoco sodalitas urbs venia amitto adstringo vorax decumbo taedium utroque cerno votum templum ventosus conitor defetiscor facere cresco decerno bibo tibi crastinus demulceo thorax viduo capto titulus voluptatem odit.",
+"image": "https://loremflickr.com/250/250",
+"price": "35762.9",
+"discount_amount": "19349.59",
+"status": true,
+"categories": [
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 8,
+"name": "Beauty, Outdoors \u0026 Jewelry"
+},
+{
+"id": 2,
+"name": "Outdoors"
+}
+]
+},
+{
+"id": 9,
+"name": "Mediocre Paper Gloves",
+"description": "Aliqua socius blandior attero totidem carus autem ademptio audacia textor subvenio civitas culpa contigo voluptatem antiquus corrumpo defendo teneo ubi itaque una et vulgus nemo cupiditate ait defessus libero usitas velociter tenetur sto dens quas comminor corrupti vinco ratione ex adnuo harum natus odit vitium cras omnis eligendi vigilo degero supra clam tres laboriosam spectaculum demergo canis reiciendis adipisci conitor nulla est ullus verumtamen deduco.",
+"image": "https://loremflickr.com/250/250",
+"price": "19295.09",
+"discount_amount": "1602.37",
+"status": true,
+"categories": [
+{
+"id": 1,
+"name": "Movies \u0026 Tools"
+},
+{
+"id": 20,
+"name": "Beauty"
+},
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home"
+},
+{
+"id": 12,
+"name": "Movies, Electronics \u0026 Beauty"
+},
+{
+"id": 17,
+"name": "Outdoors, Sports \u0026 Clothing"
+}
+]
+},
+{
+"id": 10,
+"name": "Heavy Duty Paper Bag",
+"description": "Dolorem demens aedificium deserunt conventus acerbitas appello armo arcus decretum adduco derelinquo ut vulpes decimus in ater caelestis theatrum utique absens adinventitias ad calco vinculum ars admiratio condico et ventosus capillus saepe vilitas tutis curriculum sequi tricesimus umbra.",
+"image": "https://loremflickr.com/250/250",
+"price": "17269.47",
+"discount_amount": "5140.34",
+"status": true,
+"categories": [
+{
+"id": 18,
+"name": "Grocery, Books \u0026 Jewelry"
+}
+]
+},
+{
+"id": 11,
+"name": "Practical Copper Bench",
+"description": "Certe deduco terga comburo alveus uxor ipsam dolorem verumtamen aequus tribuo debitis pauci attero doloribus et tutis ut textor stillicidium sui non theca angustus volva curto est defungo taceo utrimque somniculosus canonicus defaeco tempore amplexus calamitas admitto perspiciatis sit cum sumo tibi tenetur laboriosam cultura asperiores dolor ut tenuis id sit curtus optio.",
+"image": "https://loremflickr.com/250/250",
+"price": "12841.03",
+"discount_amount": "8858.23",
+"status": true,
+"categories": [
+{
+"id": 9,
+"name": "Beauty \u0026 Grocery"
+}
+]
+},
+{
+"id": 12,
+"name": "Sleek Iron Bag",
+"description": "Viduo apparatus antea video subseco adduco calco et beneficium rerum ambitus conscendo blanditiis demum temperantia carbo turbo aeger armarium voluntarius eos et vivo ullam occaecati temeritas toties colligo exercitationem curto sed casso.",
+"image": "https://loremflickr.com/250/250",
+"price": "18624.81",
+"discount_amount": "5132.88",
+"status": true,
+"categories": [
+{
+"id": 9,
+"name": "Beauty \u0026 Grocery"
+},
+{
+"id": 13,
+"name": "Jewelry"
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 5,
+"name": "Jewelry, Shoes \u0026 Toys"
+},
+{
+"id": 2,
+"name": "Outdoors"
+},
+{
+"id": 6,
+"name": "Movies, Outdoors \u0026 Sports"
+}
+]
+},
+{
+"id": 13,
+"name": "Synergistic Bronze Bag",
+"description": "Vorago aetas corrupti appono subseco non candidus molestias viriliter vilis aufero tempore careo templum quidem cibo qui comis absens sumo et solio caterva quisquam compono sponte voluntarius tum demergo.",
+"image": "https://loremflickr.com/250/250",
+"price": "2438.06",
+"discount_amount": "395.96",
+"status": true,
+"categories": [
+{
+"id": 12,
+"name": "Movies, Electronics \u0026 Beauty"
+},
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home"
+},
+{
+"id": 14,
+"name": "Garden, Tools \u0026 Industrial"
+}
+]
+},
+{
+"id": 14,
+"name": "Durable Plastic Hat",
+"description": "Aduro cogo arbitro creator rerum vere clarus voluptatibus acquiro velut adduco calco subvenio aveho caecus viscus denique arx venustas tego voluptatem theatrum numquam conatus non deinde temeritas allatus carcer verecundia.",
+"image": "https://loremflickr.com/250/250",
+"price": "44378.09",
+"discount_amount": "33763.0",
+"status": true,
+"categories": [
+{
+"id": 9,
+"name": "Beauty \u0026 Grocery"
+},
+{
+"id": 15,
+"name": "Kids \u0026 Movies"
+}
+]
+},
+{
+"id": 15,
+"name": "Fantastic Linen Bench",
+"description": "Perferendis tametsi territo contego nihil vigilo odio ad color molestiae strues repudiandae autem curso autem earum deleo ratione videlicet tutamen terra appono carbo qui brevis decet aut defessus verus talus officiis textilis sto vomica soluta recusandae dedico utroque tener ciminatio et caste barba demo quaerat vel vapulus volup studio et anser pariatur universe caput valde adnuo addo adimpleo.",
+"image": "https://loremflickr.com/250/250",
+"price": "30655.94",
+"discount_amount": "28070.43",
+"status": true,
+"categories": [
+{
+"id": 19,
+"name": "Electronics \u0026 Sports"
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+},
+{
+"id": 12,
+"name": "Movies, Electronics \u0026 Beauty"
+},
+{
+"id": 11,
+"name": "Kids, Grocery \u0026 Tools"
+},
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home"
+}
+]
+},
+{
+"id": 16,
+"name": "Durable Iron Hat",
+"description": "Civitas exercitationem asperiores aveho voluptatem umquam administratio tibi torqueo amor ut denuo supellex calculus colloco et sit venia cupiditate cicuta adficio aer alveus capio voluptatem sequi maiores calamitas voluptatibus animi perspiciatis quo repudiandae qui cras incidunt corrumpo tabernus unus id absconditus vinum aedificium accommodo vilitas concido vorax ut acerbitas enim amplus voro ambitus.",
+"image": "https://loremflickr.com/250/250",
+"price": "15261.11",
+"discount_amount": "10049.51",
+"status": true,
+"categories": [
+{
+"id": 4,
+"name": "Health"
+},
+{
+"id": 12,
+"name": "Movies, Electronics \u0026 Beauty"
+},
+{
+"id": 15,
+"name": "Kids \u0026 Movies"
+}
+]
+},
+{
+"id": 17,
+"name": "Incredible Bronze Shoes",
+"description": "Vita bibo cogo alius natus admiratio vomer id tergum necessitatibus vereor quaerat vel stabilis abeo victus ipsam comitatus caveo tot vigilo alioqui vester quis annus abduco auctor theca urbanus delectus denique amoveo catena tredecim ait delego infit voluptatem confugo eum voluptatem viduata termes vilitas atque ventosus architecto altus desparatus averto aspernatur defleo argentum cunctatio crustulum tergeo vinculum compello spiritus crux thema apto alo qui avarus animi sortitus utor.",
+"image": "https://loremflickr.com/250/250",
+"price": "21565.14",
+"discount_amount": "10676.55",
+"status": true,
+"categories": [
+{
+"id": 2,
+"name": "Outdoors"
+}
+]
+},
+{
+"id": 18,
+"name": "Lightweight Leather Bag",
+"description": "Angulus vivo bellicus campana demoror amplitudo corona atrocitas ultra vetus valde dolore tergiversatio speciosus cedo conduco velum cado valeo administratio articulus varius adfectus volubilis tego spiritus patria eligendi asporto urbanus canto victus abstergo vos creber aureus certe vulgivagus argumentum crustulum amicitia depromo auctor adhuc aut clementia aeger clam sophismata complectus sint urbs caries credo toties comprehendo.",
+"image": "https://loremflickr.com/250/250",
+"price": "38334.78",
+"discount_amount": "15556.23",
+"status": true,
+"categories": [
+{
+"id": 6,
+"name": "Movies, Outdoors \u0026 Sports"
+}
+]
+},
+{
+"id": 19,
+"name": "Synergistic Linen Bench",
+"description": "Arma enim socius sunt crudelis tergum ultra corpus contego verus correptius placeat credo tendo abeo verbera bos advenio tantum velit et conservo thesis eum peccatus confero explicabo pecco uter terror vicinus abundans voluptatem valens depereo canis cubicularis coniuratio harum utrimque contabesco aut quisquam aspernatur comptus defetiscor vomito victus solio ascisco corona culpa adduco sursum ars surculus creber praesentium ut est consequatur vulticulus tempus cur decipio taedium advoco.",
+"image": "https://loremflickr.com/250/250",
+"price": "19517.95",
+"discount_amount": "353.0",
+"status": true,
+"categories": [
+{
+"id": 10,
+"name": "Industrial \u0026 Computers"
+}
+]
+},
+{
+"id": 20,
+"name": "Fantastic Leather Clock",
+"description": "A abduco vergo aequitas repellat ipsam cariosus audeo cauda dolorem quia alveus confido dignissimos coerceo velociter tergeo ultra vel aegre thalassinus ratione ars in vilicus baiulus ullam suppono aureus demulceo celo aperte dolorem derelinquo apparatus tactus xiphias tabgo stips ipsa arma cupiditas cibo illo vetus et coniuratio pariatur blandior tenax brevis aduro fugiat decimus molestias timor deprimo stabilis.",
+"image": "https://loremflickr.com/250/250",
+"price": "39233.98",
+"discount_amount": "31031.65",
+"status": true,
+"categories": [
+{
+"id": 6,
+"name": "Movies, Outdoors \u0026 Sports"
+},
+{
+"id": 17,
+"name": "Outdoors, Sports \u0026 Clothing"
+}
+]
+}
+]
+}

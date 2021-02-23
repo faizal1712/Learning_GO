@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>View Data</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+    <div class="" style="margin: 8% 4%">
+        <nav class="m-5 navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="view" href="./">View</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insert" href="./insert">Insert</a>
+                    </li>
+				</ul>
+			</div>
+		</nav>
+
+    <!-- <div class="my-5"> -->
+        <table id="myTable" class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Name</th>
+                    <th>GRE</th>
+                    <th>TOEFL</th>
+                    <th>CGPA</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range $index, $res:=.}}
+                <tr>
+                    <td>{{add $index 1}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.GRE}}</td>
+                    <td>{{.TOEFL}}</td>
+                    <td>{{.CGPA}}</td>
+                    <td><a href="/update?Id={{.Id}}">Edit</a></td>
+                    <td><a href="/delete?Id={{.Id}}">Delete</a></td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
+</script>

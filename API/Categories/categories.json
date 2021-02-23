@@ -1,0 +1,133 @@
+{
+"code": 200,
+"meta": {
+"pagination": {
+"total": 20,
+"pages": 1,
+"page": 1,
+"limit": 20
+}
+},
+"data": [
+{
+"id": 1,
+"name": "Movies \u0026 Tools",
+"description": "Spiculum torrens vere acceptus arceo urbanus.",
+"status": true
+},
+{
+"id": 2,
+"name": "Outdoors",
+"description": "Vir unde vestigium tabgo venia.",
+"status": true
+},
+{
+"id": 3,
+"name": "Clothing, Beauty \u0026 Home",
+"description": "Temeritas beatus natus solum tenetur cuppedia usque avaritia patrocinor perspiciatis cubicularis.",
+"status": true
+},
+{
+"id": 4,
+"name": "Health",
+"description": "Bellicus stillicidium armarium candidus victoria dolores ut ullus arbor tui vicissitudo.",
+"status": true
+},
+{
+"id": 5,
+"name": "Jewelry, Shoes \u0026 Toys",
+"description": "Sunt vorago vespillo cubicularis adiuvo catena tepesco deripio claustrum nesciunt.",
+"status": true
+},
+{
+"id": 6,
+"name": "Movies, Outdoors \u0026 Sports",
+"description": "Talus virtus distinctio comburo tertius verumtamen adultus caecus valde deinde calco.",
+"status": true
+},
+{
+"id": 7,
+"name": "Sports",
+"description": "Tertius solum aut subvenio vomito decimus denique.",
+"status": true
+},
+{
+"id": 8,
+"name": "Beauty, Outdoors \u0026 Jewelry",
+"description": "Crustulum sub demum et sponte quod ceno quas benevolentia.",
+"status": true
+},
+{
+"id": 9,
+"name": "Beauty \u0026 Grocery",
+"description": "Casus acceptus defluo venia cursus.",
+"status": true
+},
+{
+"id": 10,
+"name": "Industrial \u0026 Computers",
+"description": "Curtus clamo vel talio alienus aut eos quia attero stips.",
+"status": true
+},
+{
+"id": 11,
+"name": "Kids, Grocery \u0026 Tools",
+"description": "Atque adfectus debilito sopor concido cresco viriliter tendo abscido conqueror aut.",
+"status": true
+},
+{
+"id": 12,
+"name": "Movies, Electronics \u0026 Beauty",
+"description": "Deserunt peccatus talis thesis benevolentia sponte.",
+"status": true
+},
+{
+"id": 13,
+"name": "Jewelry",
+"description": "Patruus considero adultus depromo solio vulgaris paens.",
+"status": true
+},
+{
+"id": 14,
+"name": "Garden, Tools \u0026 Industrial",
+"description": "Commemoro deleniti vobis stips quos tactus tantillus reiciendis.",
+"status": true
+},
+{
+"id": 15,
+"name": "Kids \u0026 Movies",
+"description": "Acidus angustus derelinquo molestias aequus cariosus in conturbo.",
+"status": true
+},
+{
+"id": 16,
+"name": "Music \u0026 Industrial",
+"description": "Calcar capio abundans corpus aeneus architecto culpo usitas tardus avaritia.",
+"status": true
+},
+{
+"id": 17,
+"name": "Outdoors, Sports \u0026 Clothing",
+"description": "Cattus umquam combibo cibo solum corporis peior comes.",
+"status": true
+},
+{
+"id": 18,
+"name": "Grocery, Books \u0026 Jewelry",
+"description": "Bibo creo calamitas tamen utique defero cupressus aggredior.",
+"status": true
+},
+{
+"id": 19,
+"name": "Electronics \u0026 Sports",
+"description": "Vehemens acceptus et assentator occaecati.",
+"status": true
+},
+{
+"id": 20,
+"name": "Beauty",
+"description": "Vaco concedo spero solvo repellat.",
+"status": true
+}
+]
+}
