@@ -68,7 +68,7 @@ func main() {
 
 	start := time.Now()
 
-	insertRows()
+	// insertRows()
 
 	elapsed := time.Since(start)
 	log.Printf("Time taken %s", elapsed)

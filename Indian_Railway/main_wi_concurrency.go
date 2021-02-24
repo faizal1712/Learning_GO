@@ -77,7 +77,7 @@ func main() {
 	fgptr := flag.String("file", "All_Indian_Trains.csv", "a string")
 	flag.Parse()
 	fmt.Println(*fgptr)
-	insertRows(ch, &concurrencyLimit, fgptr)
+	// insertRows(ch, &concurrencyLimit, fgptr)
 
 	for i := 0; i < concurrencyLimit; i++ {
 		<-ch
