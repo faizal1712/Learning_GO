@@ -1,9 +1,11 @@
-package main1
+package main
 
 import (
 	"context"
 	"encoding/csv"
 	"encoding/json"
+	"flag"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -25,7 +27,7 @@ type CsvRow struct {
 const (
 	CONNECTIONSTRING = "mongodb+srv://root:1712@cluster0.ynb7n.mongodb.net/test"
 	DB               = "indian_railway"
-	COLLECTION       = "indian_railway"
+	COLLECTION       = "indian_railway1"
 )
 
 var clientInstance *mongo.Client
@@ -53,6 +55,7 @@ func GetMongoClient() (*mongo.Client, error) {
 }
 
 func main() {
+	fmt.Println("hello")
 
 	// client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://root:1712@cluster0.ynb7n.mongodb.net/test"))
 	// if err != nil {
@@ -66,9 +69,19 @@ func main() {
 	// }
 	// defer client.Disconnect(ctx)
 
-	start := time.Now()
+	ch := make(chan bool)
 
-	insertRows()
+	concurrencyLimit := 0
+
+	start := time.Now()
+	fgptr := flag.String("file", "All_Indian_Trains.csv", "a string")
+	flag.Parse()
+	fmt.Println(*fgptr)
+	insertRows(ch, &concurrencyLimit, fgptr)
+
+	for i := 0; i < concurrencyLimit; i++ {
+		<-ch
+	}
 
 	elapsed := time.Since(start)
 	log.Printf("Time taken %s", elapsed)
@@ -80,38 +93,43 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-func insertRows() {
+func insertRows(ch chan bool, concurrencyLimit *int, fgptr *string) {
 	client, err := GetMongoClient()
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 
 	err = client.Ping(context.TODO(), nil)
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 	// Create a handle to the respective collection in the database.
 	collection := client.Database(DB).Collection(COLLECTION)
 
-	lines, err := ReadCsv("All_Indian_Trains.csv")
+	lines, err := ReadCsv(*fgptr)
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 
 	lines = lines[1:]
 
 	// Loop through lines & turn into object
 	for _, line := range lines {
-		data := CsvRow{
-			TrainNo:       line[1],
-			TrainName:     line[2],
-			StartingPoint: line[3],
-			EndingPoint:   line[4],
-		}
-		_, err = collection.InsertOne(context.TODO(), data)
-		if err != nil {
-			panic(err)
-		}
+		*concurrencyLimit += 1
+		go func(line []string, ch chan bool) {
+			data := CsvRow{
+				TrainNo:       line[1],
+				TrainName:     line[2],
+				StartingPoint: line[3],
+				EndingPoint:   line[4],
+			}
+			_, err = collection.InsertOne(context.TODO(), data)
+			if err != nil {
+				fmt.Println(err)
+			}
+			ch <- true
+		}(line, ch)
+		// fmt.Printf("var1 = %T\n", line)
 		// fmt.Println(data)
 	}
 }
@@ -121,12 +139,12 @@ func FetchData(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	client, err := GetMongoClient()
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 
 	err = client.Ping(context.TODO(), nil)
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 	collection := client.Database(DB).Collection(COLLECTION)
 
@@ -143,7 +161,7 @@ func FetchData(w http.ResponseWriter, r *http.Request) {
 		t := CsvRow{}
 		err := cur.Decode(&t)
 		if err != nil {
-			panic(err)
+			fmt.Println(err)
 		}
 		issues = append(issues, t)
 	}
