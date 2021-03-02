@@ -124,7 +124,7 @@ func loggingMiddleware(handler http.HandlerFunc) http.HandlerFunc {
 
 		bodydata, _ := ioutil.ReadAll(r.Body)
 		var tokendata tokenData
-		_ = json.Unmarshal(bodydata, &tokendata)
+		_ = json.Unmarshal(bodydata, &tokendata) //err:=json.NewDecoder(r.body).Decode(&tokendata)
 		if tokendata.Token == "" {
 			handler.ServeHTTP(w, r)
 			return
@@ -172,7 +172,7 @@ func fetchUser(w http.ResponseWriter, r *http.Request) {
 	bodydata, _ := ioutil.ReadAll(r.Body)
 	var user userData
 	_ = json.Unmarshal(bodydata, &user)
-
+	fmt.Println(user)
 	var fetchUser userData
 
 	var res []byte
@@ -219,10 +219,11 @@ func fetchUser(w http.ResponseWriter, r *http.Request) {
 			// })
 			res, _ = json.Marshal(struct {
 				IsError bool
+				Msg     string
 				Count   int
 				Data    userData
 				Token   string
-			}{false, 1, fetchUser, tokenstring})
+			}{false, "Signed In Successfully", 1, fetchUser, tokenstring})
 		}
 	}
 	w.Write(res)
