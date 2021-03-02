@@ -6,16 +6,24 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"sync"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+
+	"github.com/joho/godotenv"
 )
+
+type PageId struct {
+	ID int `json:"id"`
+}
 
 type CsvRow struct {
 	TrainNo       string `bson:"TrainNo"`
@@ -24,19 +32,26 @@ type CsvRow struct {
 	EndingPoint   string `bson:"EndingPoint"`
 }
 
-const (
-	CONNECTIONSTRING = "mongodb+srv://root:1712@cluster0.ynb7n.mongodb.net/test"
-	DB               = "indian_railway"
-	COLLECTION       = "indian_railway1"
-)
-
 var clientInstance *mongo.Client
 var clientInstanceError error
 var mongoOnce sync.Once
 
+func goDotEnvVariable(key string) string {
+
+	// load .env file
+	err := godotenv.Load("env_var.env")
+
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
+	return os.Getenv(key)
+}
+
 func GetMongoClient() (*mongo.Client, error) {
 	//Perform connection creation operation only once.
 	mongoOnce.Do(func() {
+		CONNECTIONSTRING := goDotEnvVariable("CONNECTIONSTRING")
 		// Set client options
 		clientOptions := options.Client().ApplyURI(CONNECTIONSTRING)
 		// Connect to MongoDB
@@ -69,18 +84,17 @@ func main() {
 	// }
 	// defer client.Disconnect(ctx)
 
-	ch := make(chan bool)
+	LIMIT, _ := strconv.Atoi(goDotEnvVariable("LIMIT"))
 
-	concurrencyLimit := 0
-
+	ch := make(chan bool, LIMIT)
 	start := time.Now()
-	fgptr := flag.String("file", "All_Indian_Trains.csv", "a string")
+	fgptr := flag.Bool("insert", false, "a bool")
 	flag.Parse()
-	fmt.Println(*fgptr)
-	// insertRows(ch, &concurrencyLimit, fgptr)
 
-	for i := 0; i < concurrencyLimit; i++ {
-		<-ch
+	if *fgptr {
+		insertRows(ch)
+	} else {
+		fmt.Println(*fgptr)
 	}
 
 	elapsed := time.Since(start)
@@ -93,8 +107,9 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
-func insertRows(ch chan bool, concurrencyLimit *int, fgptr *string) {
+func insertRows(ch chan bool) {
 	client, err := GetMongoClient()
+	defer client.Disconnect(context.TODO())
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -103,10 +118,14 @@ func insertRows(ch chan bool, concurrencyLimit *int, fgptr *string) {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	DB := goDotEnvVariable("DB")
+	COLLECTION := goDotEnvVariable("COLLECTION")
+
 	// Create a handle to the respective collection in the database.
 	collection := client.Database(DB).Collection(COLLECTION)
 
-	lines, err := ReadCsv(*fgptr)
+	lines, err := ReadCsv("All_Indian_Tasks.csv")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -115,7 +134,7 @@ func insertRows(ch chan bool, concurrencyLimit *int, fgptr *string) {
 
 	// Loop through lines & turn into object
 	for _, line := range lines {
-		*concurrencyLimit += 1
+		ch <- true
 		go func(line []string, ch chan bool) {
 			data := CsvRow{
 				TrainNo:       line[1],
@@ -127,14 +146,27 @@ func insertRows(ch chan bool, concurrencyLimit *int, fgptr *string) {
 			if err != nil {
 				fmt.Println(err)
 			}
-			ch <- true
+			<-ch
 		}(line, ch)
 		// fmt.Printf("var1 = %T\n", line)
 		// fmt.Println(data)
 	}
+	LIMIT, _ := strconv.Atoi(goDotEnvVariable("LIMIT"))
+
+	for i := 0; i < LIMIT; i++ {
+		ch <- true
+	}
 }
 
 func FetchData(w http.ResponseWriter, r *http.Request) {
+	// id, _ := strconv.Atoi(r.FormValue("id"))
+	bodydata, _ := ioutil.ReadAll(r.Body)
+	// fmt.Println(bodydata)
+	var score PageId
+	_ = json.Unmarshal(bodydata, &score)
+	fmt.Println(score)
+
+	id := score.ID
 
 	w.Header().Set("Content-Type", "application/json")
 	client, err := GetMongoClient()
@@ -146,13 +178,24 @@ func FetchData(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	DB := goDotEnvVariable("DB")
+	COLLECTION := goDotEnvVariable("COLLECTION")
+
 	collection := client.Database(DB).Collection(COLLECTION)
 
 	//Define filter query for fetching specific document from collection
 	filter := bson.D{{}} //bson.D{{}} specifies 'all documents'
 	issues := []CsvRow{}
+
+	option := options.Find()
+	option.SetLimit(10)
+	sk := 10 * id
+	fmt.Println(sk)
+	option.SetSkip(int64(sk))
+
 	//Perform Find operation & validate against the error.
-	cur, findError := collection.Find(context.TODO(), filter)
+	cur, findError := collection.Find(context.TODO(), filter, option)
 	if findError != nil {
 		panic(findError)
 	}
