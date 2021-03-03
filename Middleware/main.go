@@ -18,14 +18,14 @@ import (
 
 type userData struct {
 	gorm.Model
-	ID       int    `json:ID`
-	Name     string `json:name`
-	Password string `json:password`
-	Role     string `json:role`
+	ID       int    `json:"ID"`
+	Name     string `json:"name"`
+	Password string `json:"password"`
+	Role     string `json:"role"`
 }
 
 type tokenData struct {
-	Token string `json:token`
+	Token string `json:"token"`
 }
 
 func goDotEnvVariable(key string) string {
