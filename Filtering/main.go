@@ -451,7 +451,7 @@ func insertData() {
 
 	for _, line := range csvData {
 		ch <- 1
-		func(line []string) {
+		go func(line []string) {
 			seq, _ := strconv.Atoi(line[2])
 			dist, _ := strconv.Atoi(line[7])
 			data := Data{
